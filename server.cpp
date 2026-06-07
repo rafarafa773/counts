@@ -4,10 +4,9 @@
 #include <fstream>
 
 mpz_class fatorial(mpz_class n) {
-	if (n <= 1) return 1;
-	mpz_class resultado = 1;
-	for (mpz_class i = 2; i <= n; ++i) resultado *= i;
-	return resultado;
+	mpz_class result;
+	mpz_fac_ui(result.get_mpz_t(), n.get_ui());
+	return result;
 }
 std::string ler() {
 	std::ifstream arq("index.html");
