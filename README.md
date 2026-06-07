@@ -1,10 +1,6 @@
 ## counts website
 i only did this to see how to use crow \
 i found it really funny \
-i should do this more times \
+i should do this more times 
 
-
-https://github.com/user-attachments/assets/d4a8fbd7-5478-4b19-b8ce-2372bfbb1702
-
-
-
+<img width="150" height="150" alt="wohoo" src="https://github.com/user-attachments/assets/38461502-c448-4a8d-9ea1-bafe44a8ddbe" />
