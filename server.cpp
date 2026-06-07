@@ -23,7 +23,6 @@ mpz_class multi(mpz_class num1, mpz_class num2) {
 mpz_class divisao(mpz_class num1, mpz_class num2) {
 	return num1/num2;
 }
-
 mpz_class somado(mpz_class num1, mpz_class num2) {
 	return num1 + num2;
 }
@@ -35,7 +34,9 @@ mpz_class resto(mpz_class num1, mpz_class num2) {
 }
 
 int main() {
+	mpf_set_default_prec(1024);
 	crow::SimpleApp app;
+	app.loglevel(crow::LogLevel::Warning);
 
 	CROW_ROUTE(app, "/")([]() {
 		return ler();
