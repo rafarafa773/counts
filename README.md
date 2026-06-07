@@ -8,10 +8,14 @@ i should do this more times
 
 
 if you want to compile (you wont lol) you will have to download crow and gmp \
-in arch linux its
+in gentoo linux its
 ```
-sudo pacman -S gmp
-yay -S crow
+sudo emerge --ask dev-libs/gmp
+sudo emerge dev-libs/boost net-libs/asio
+git clone https://github.com/CrowCpp/Crow
+cd Crow
+cmake . -B build -DCROW_BUILD_EXAMPLES=OFF -DCROW_BUILD_TESTS=OFF
+sudo cmake --install build
 ``` 
 and to compile use make 
 ```
