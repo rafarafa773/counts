@@ -3,10 +3,11 @@
 #include <sstream>
 #include <fstream>
 
-mpz_class fatorial(mpz_class num1) {
-	if (num1 <= 1)
-		return 1;
-	return num1 * fatorial(num1 - 1);
+mpz_class fatorial(mpz_class n) {
+	if (n <= 1) return 1;
+	mpz_class resultado = 1;
+	for (mpz_class i = 2; i <= n; ++i) resultado *= i;
+	return resultado;
 }
 std::string ler() {
 	std::ifstream arq("index.html");
@@ -83,7 +84,6 @@ int main() {
 			}
 			else { /* fatorial*/
 				int n_int = std::stoi(n_fatorial);
-				if (n_int > 65300 || n_int < 1) return crow::response(400, "boboca");
 				mpz_class result_fatorial = fatorial(mpz_class(std::string(n_fatorial)));
 				std::string out_fat = "fatorial of " + std::string(n_fatorial) + " is " + result_fatorial.get_str();
 				return crow::response(out_fat);
